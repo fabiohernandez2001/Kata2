@@ -13,7 +13,6 @@ import java.util.Map;
  * @author fabio
  */
 public class Kata2 {
-
     /**
      * @param args the command line arguments
      */
@@ -21,11 +20,10 @@ public class Kata2 {
         // TODO code application logic here
         int[] data= {1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,5,4};
         
-        Map<Integer,Integer> histogram=new HashMap<Integer,Integer>();
-        for (int i :data) {
-            histogram.put(i,histogram.containsKey(i)? histogram.get(i)+1 : 1);
-        }
-        for (Map.Entry<Integer,Integer> i : histogram.entrySet()) {
+        Histogram histo= new Histogram(data);
+        Map<Integer,Integer> histogr = histo.getHistogram();
+        
+        for (Map.Entry<Integer,Integer> i : histogr.entrySet()) {
             System.out.println(i.getKey()+"==>"+ i.getValue());
         }
     }

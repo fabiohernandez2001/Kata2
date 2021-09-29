@@ -18,12 +18,12 @@ public class Kata2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Integer[] data= {1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,5,4};
+        String[] data= {"Maria", "Santiago", "Santiago", "Pedro", "Pedro", "Juan"};
         
         Histogram histo= new Histogram(data);
-        Map<Integer,Integer> histogr = histo.getHistogram();
+        Map<String,Integer> histogr = histo.getHistogram();
         
-        for (Map.Entry<Integer,Integer> i : histogr.entrySet()) {
+        for (Map.Entry<String,Integer> i : histogr.entrySet()) {
             System.out.println(i.getKey()+"==>"+ i.getValue());
         }
     }
